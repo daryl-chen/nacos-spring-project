@@ -73,7 +73,7 @@ public class AnnotationNacosInjectedBeanPostProcessor
 
 		Class<AbstractNacosServiceBeanBuilder> builderClass = AbstractNacosServiceBeanBuilder.class;
 
-		String[] beanNames = BeanUtils.getBeanNames(beanFactory, builderClass);
+		String[] beanNames = BeanUtils.getBeanNames(beanFactory, builderClass, true);
 		if (beanNames.length == 0) {
 			throw new NoSuchBeanDefinitionException(builderClass,
 					format("Please check the BeanDefinition of %s in Spring BeanFactory",
